@@ -5,18 +5,80 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+/* header start */
+
+.header {
+    padding: 30px 5%;
+    position: fixed;
+    top: 0
+}
+
+.header ul {
+    display: flex;
+}
+
+.header ul li {
+    list-style: none;
+    margin: 0 3px;
+}
+
+.header ul li a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    background: orange;
+    padding: 7px 30px;
+    color: #fff;
+    font-weight: 600;
+    position: relative;
+    transition: all .5s;
+}
+
+.header ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(17, 31, 219, 0.867);
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: all .5s;
+}
+
+.header ul li a:hover {
+    background: none;
+}
+
+.header ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* header end */
+
 .container {
-    padding: 0 5%;
+    padding: 70px 5%;
     display: flex;
     height: 100vh;
     background: url(images/top-banner.png) no-repeat;
+}
+
+.dream-container {
+    padding: 0 5%;
+    display: flex;
+    height: 100vh;
+    background: url(images/dream-bg.png) no-repeat;
+    background-position: right;
 }
 
 .container-half {
     width: 50%;
 }
 
-.container-half img {
+.container-half img,
+.dream-container img {
     width: 100%;
     padding: 0 20px;
 }
@@ -39,7 +101,7 @@ h4 {
     margin-bottom: 20px;
 }
 
-a {
+.a-btn {
     display: inline-block;
     padding: 10px 25px;
     background: linear-gradient(orange, tomato);
@@ -48,4 +110,42 @@ a {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
+}
+
+
+/* start experiance section */
+
+.experiance-sec {
+    padding: 0 5%;
+    background: url(images/exp-bg.png) no-repeat;
+    background-position: left;
+    height: 100vh;
+}
+
+.ex-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ex-container div {
+    width: 45%;
+    padding: 15px;
+    box-shadow: 0 30px 30px orangered;
+}
+
+.ex-container .left {
+    border-left: 7px solid;
+    border-image: linear-gradient(blue, red);
+    border-image-slice: 1;
+}
+
+.ex-container .right {
+    border-left: 7px solid;
+    border-image: linear-gradient(red, blue);
+    border-image-slice: 1;
+}
+
+footer p {
+    text-align: center;
+    margin-bottom: 20px;
 }
